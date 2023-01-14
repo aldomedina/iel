@@ -1,0 +1,29 @@
+@import "../../styles/mixins.scss";
+.section {
+  flex: 1;
+  height: 100%;
+  width: 100vw;
+}
+
+.columns {
+  display: flex;
+  .container {
+    flex: 1;
+    position: relative;
+    overflow: hidden;
+  }
+  .content {
+    height: 100%;
+    width: 100%;
+    padding: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    z-index: 10;
+    .inputsBox {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+  }
+}

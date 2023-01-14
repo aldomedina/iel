@@ -1,0 +1,9 @@
+@import "../../styles/mixins.scss";
+
+.main {
+  height: 100%;
+  background-image: radial-gradient(
+    color(primary, lighter),
+    color(primary, base)
+  );
+}

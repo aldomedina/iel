@@ -1,0 +1,44 @@
+@import "../styles/mixins.scss";
+.main {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  .container {
+    position: relative;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    overflow: hidden;
+  }
+  .footer {
+    height: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    .lines {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      .line {
+        height: 1px;
+        background-color: color(primary, base);
+        width: 150px;
+      }
+      .dot {
+        background-color: color(primary, base);
+        border-radius: 999px;
+        height: 10px;
+        width: 10px;
+      }
+    }
+  }
+  .logo {
+    z-index: 10;
+    color: white;
+  }
+}

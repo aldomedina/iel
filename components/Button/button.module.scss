@@ -1,0 +1,44 @@
+@import "../../styles/mixins.scss";
+.btn {
+  padding: 3px;
+  border-radius: 999px;
+  transition: transform 0.1s ease-in-out;
+  width: max-content;
+  &:active {
+    transform: translateY(5px);
+  }
+  &:disabled {
+    opacity: 0.3;
+    cursor: default;
+  }
+}
+
+.contained {
+  background-color: color(primary, base);
+  color: color(secondary, base);
+  &:hover {
+    background-color: darken(color(primary, base), 5%);
+  }
+}
+
+.outlined {
+  background-color: transparent;
+  color: color(primary, base);
+  border: 1px solid color(primary, base);
+  &:hover {
+    border-color: darken(color(primary, base), 10%);
+    color: darken(color(primary, base), 10%);
+  }
+}
+
+.SM {
+  font-size: 0.75rem;
+  padding: 0.5rem 1rem;
+}
+.MD {
+  font-size: 1rem;
+}
+.LG {
+  font-size: 1.25rem;
+  padding: 1rem 3rem;
+}

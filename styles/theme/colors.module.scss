@@ -1,0 +1,17 @@
+$primary-color: #3a5743;
+$primary-lighter-color: #87b37a;
+$secondary-color: #ffffff;
+$palettes: (
+  primary: (
+    base: $primary-color,
+    lighter: $primary-lighter-color,
+  ),
+  secondary: (
+    base: $secondary-color,
+  ),
+);
+
+:export {
+  primaryColor: $primary-color;
+  lighterPrimaryColor: $primary-lighter-color;
+}

@@ -1,0 +1,8 @@
+@import "../../styles/mixins.scss";
+.wrapper {
+  display: flex;
+  gap: 1rem;
+  .label {
+    font-size: 1.2rem;
+  }
+}

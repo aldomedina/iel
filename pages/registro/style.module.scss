@@ -1,0 +1,16 @@
+.main {
+  height: 100%;
+  width: 100vw;
+  overflow: hidden;
+  .carousel {
+    height: 100%;
+    width: 400vw;
+    display: flex;
+    transition: all 0.65s ease-in-out;
+    .section {
+      flex: 1;
+      height: 100%;
+      width: 100vw;
+    }
+  }
+}
