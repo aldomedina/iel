@@ -12,7 +12,15 @@ const PillsCheckbox: React.FC<{
   active: string | undefined;
   setActive: React.Dispatch<React.SetStateAction<string | undefined>>;
   isHorizontal?: boolean;
-}> = ({ options, label, active, setActive, isHorizontal = false }) => {
+  invertColors?: boolean;
+}> = ({
+  options,
+  label,
+  active,
+  setActive,
+  isHorizontal = false,
+  invertColors = false,
+}) => {
   return (
     <div
       className={s.wrapper}
@@ -28,6 +36,7 @@ const PillsCheckbox: React.FC<{
             active={active === el.value}
             option={el}
             onClick={() => setActive(el.value)}
+            invertColors={invertColors}
           />
         ))}
       </div>

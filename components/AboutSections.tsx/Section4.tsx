@@ -57,9 +57,18 @@ const Section4: React.FC<{
               setActives={setSemanal}
               actives={semanal}
               label="Cuántos días utilizas el binder"
+              wrap
             />
           </div>
-          <div>
+          <div className={s.btns}>
+            <Button
+              customClass={s.nextButton}
+              variant="outlined"
+              size="LG"
+              onClick={() => setActive(2)}
+            >
+              VOLVER
+            </Button>
             <Button
               customClass={s.nextButton}
               variant="contained"

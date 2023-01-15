@@ -6,4 +6,44 @@
     color(primary, lighter),
     color(primary, base)
   );
+  color: color(secondary, base);
+  .container {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .content {
+    max-width: 600px;
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    .btns {
+      margin-top: 3rem;
+      display: flex;
+      gap: 1rem;
+    }
+  }
+  .boxes {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(100px, 350px));
+    grid-template-rows: 1fr 1fr;
+    gap: 2rem;
+    .box {
+      aspect-ratio: 1.333;
+      border: 2px solid color(secondary, base);
+      border-radius: 5px;
+      padding: 1rem;
+      display: grid;
+
+      .label {
+        font-size: 2.2rem;
+      }
+      .btn {
+        justify-self: flex-end;
+        align-self: flex-end;
+      }
+    }
+  }
 }

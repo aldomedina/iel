@@ -26,4 +26,20 @@
       gap: 2rem;
     }
   }
+  .top {
+    display: flex;
+    justify-content: space-between;
+    .foto {
+      position: relative;
+      overflow: hidden;
+      width: 150px;
+      height: 150px;
+      border-radius: 999px;
+      border: 1px solid color(primar, base);
+    }
+  }
+  .btns {
+    display: flex;
+    gap: 1rem;
+  }
 }

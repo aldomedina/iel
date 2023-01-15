@@ -1,12 +1,15 @@
 @import "../../styles/mixins.scss";
 .wrapper {
   display: flex;
-  gap: 1rem;
+  gap: 1.5rem;
   .label {
     font-size: 1.2rem;
   }
   .options {
     display: flex;
     gap: 1rem;
+    &.wrap {
+      flex-wrap: wrap;
+    }
   }
 }

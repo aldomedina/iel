@@ -1,3 +1,4 @@
+import classNames from "classnames";
 import Pill from "./Pill";
 import s from "./style.module.scss";
 
@@ -11,8 +12,18 @@ const PillsRadioInput: React.FC<{
   label: string;
   actives: string[] | undefined;
   setActives: React.Dispatch<React.SetStateAction<string[] | undefined>>;
+  invertColors?: boolean;
   isHorizontal?: boolean;
-}> = ({ options, label, actives, setActives, isHorizontal = false }) => {
+  wrap?: boolean;
+}> = ({
+  options,
+  label,
+  actives,
+  setActives,
+  invertColors = false,
+  isHorizontal = false,
+  wrap = false,
+}) => {
   const handleSetActive = (value: string) => {
     if (!actives) {
       setActives([value]);
@@ -34,13 +45,14 @@ const PillsRadioInput: React.FC<{
       <label className={s.label} htmlFor="">
         {label}
       </label>
-      <div className={s.options}>
+      <div className={classNames(s.options, { [s.wrap]: wrap })}>
         {options.map((el) => (
           <Pill
             key={el.value}
             active={actives?.includes(el.value)}
             option={el}
             onClick={() => handleSetActive(el.value)}
+            invertColors={invertColors}
           />
         ))}
       </div>

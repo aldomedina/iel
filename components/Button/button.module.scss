@@ -19,6 +19,13 @@
   &:hover {
     background-color: darken(color(primary, base), 5%);
   }
+  &.invert {
+    background-color: color(secondary, base);
+    color: color(primary, base);
+    &:hover {
+      background-color: darken(color(secondary, base), 5%);
+    }
+  }
 }
 
 .outlined {
@@ -29,6 +36,14 @@
     border-color: darken(color(primary, base), 10%);
     color: darken(color(primary, base), 10%);
   }
+  &.invert {
+    color: color(secondary, base);
+    border: 1px solid color(secondary, base);
+    &:hover {
+      border-color: darken(color(secondary, base), 10%);
+      color: darken(color(secondary, base), 10%);
+    }
+  }
 }
 
 .SM {
@@ -37,6 +52,7 @@
 }
 .MD {
   font-size: 1rem;
+  padding: 0.75rem 1.5rem;
 }
 .LG {
   font-size: 1.25rem;

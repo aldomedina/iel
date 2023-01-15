@@ -8,12 +8,14 @@ const Pill: React.FC<{
   option: PillOption;
   onClick: () => void;
   active?: boolean;
-}> = ({ option, onClick, active = false }) => {
+  invertColors?: boolean;
+}> = ({ option, onClick, active = false, invertColors }) => {
   return (
     <Button
       onClick={onClick}
       variant={active ? "contained" : "outlined"}
-      size="SM"
+      size="MD"
+      invertColors={invertColors}
     >
       {option.label}
     </Button>

@@ -1,0 +1,84 @@
+@import "../../styles/mixins.scss";
+.main {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  .container {
+    gap: 2rem;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    max-width: 900px;
+    padding: 4rem 1rem;
+  }
+  .top {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    .bienvenido {
+      display: flex;
+      gap: 4rem;
+      .hola {
+        font-size: 3rem;
+      }
+      .clima {
+        display: flex;
+        .tiempo {
+          font-size: 3rem;
+        }
+      }
+    }
+  }
+  .columns {
+    display: flex;
+    gap: 2rem;
+    flex: 1;
+    .column {
+      flex: 1;
+      height: 100%;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      gap: 2rem;
+      .mainBox {
+        grid-column: 1 / 3;
+        h2 {
+          font-size: 2.5rem;
+        }
+      }
+    }
+    .box {
+      border: 2px solid color(primary, base);
+      padding: 2rem;
+      display: grid;
+      .irWrapper {
+        justify-self: flex-end;
+        align-self: flex-end;
+      }
+    }
+    .horizontalBox {
+      border: 2px solid color(primary, base);
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .aside {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      justify-content: flex-end;
+    }
+  }
+}
+.foto {
+  position: relative;
+  overflow: hidden;
+  width: 150px;
+  height: 150px;
+  border-radius: 999px;
+  border: 1px solid color(primar, base);
+}

@@ -38,8 +38,15 @@ const Section3: React.FC<{
               label="Tienes el dispositivo Ie: "
             />
           </div>
-          <div>
-            {" "}
+          <div className={s.btns}>
+            <Button
+              customClass={s.nextButton}
+              variant="outlined"
+              size="LG"
+              onClick={() => setActive(1)}
+            >
+              VOLVER
+            </Button>
             <Button
               customClass={s.nextButton}
               variant="outlined"
