@@ -5,6 +5,7 @@ import s from "./style.module.scss";
 import perfilIMG from "../../assets/images/perfil.png";
 import classNames from "classnames";
 import Button from "../../components/Button";
+import Icon from "../../components/Icon";
 const Dashboard = () => {
   const { nombre, ciudad, conectado, setConectado } = useContext(AppContext);
   const handleConectar = () => {
@@ -18,16 +19,19 @@ const Dashboard = () => {
           <div className={s.bienvenido}>
             <div>
               <h1 className={s.hola}>Hola!</h1>
-              <h2>{nombre}</h2>
+              <h2>{nombre ?? "nombre"}</h2>
             </div>
 
             <div className={s.clima}>
               <div>
                 <span className={s.tiempo}>25º</span>
                 <br />
-                <span>{ciudad}</span>
+                <span>{ciudad ?? "ciudad"}</span>
               </div>
-              <span></span>
+              <span>
+                {" "}
+                <Icon icon="temperatura" size="xl" />
+              </span>
             </div>
           </div>
           <div className={s.foto}>
@@ -52,13 +56,15 @@ const Dashboard = () => {
               </h2>
               <div className={s.irWrapper}>
                 {conectado === "conectado" ? (
-                  <Button>ir</Button>
+                  <Button isIcon>
+                    <Icon icon="flecha" size="lg" />
+                  </Button>
                 ) : (
                   <Button
                     disabled={conectado === "conectando"}
                     onClick={() => handleConectar()}
                   >
-                    {conectado === "conectando" ? "..." : "ir"}
+                    {conectado === "conectando" ? "..." : "CONECTAR"}
                   </Button>
                 )}
               </div>
@@ -66,25 +72,38 @@ const Dashboard = () => {
             <div className={s.box}>
               <h2>Monitoreo</h2>
               <div className={s.irWrapper}>
-                <Button>ir</Button>
+                <Button isIcon>
+                  <Icon icon="flecha" size="lg" />
+                </Button>
               </div>
             </div>
             <div className={s.box}>
               <h2> Reporte semanal</h2>
               <div className={s.irWrapper}>
-                <Button>ir</Button>
+                <Button isIcon>
+                  <Icon icon="flecha" size="lg" />
+                </Button>
               </div>
             </div>
           </div>
           <div className={classNames(s.column, s.aside)}>
             <div className={s.horizontalBox}>
-              <h2>Noticias</h2> <Button>ir</Button>
+              <h2>Noticias</h2>
+              <Button variant="text">
+                <Icon icon="flecha" size="lg" />
+              </Button>
             </div>
             <div className={s.horizontalBox}>
-              <h2>Recomendaciones</h2> <Button>ir</Button>
+              <h2>Recomendaciones</h2>
+              <Button variant="text">
+                <Icon icon="flecha" size="lg" />
+              </Button>
             </div>
             <div className={s.horizontalBox}>
-              <h2>Foro</h2> <Button>ir</Button>
+              <h2>Foro</h2>
+              <Button variant="text">
+                <Icon icon="flecha" size="lg" />
+              </Button>
             </div>
           </div>
         </div>

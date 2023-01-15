@@ -3,24 +3,24 @@ import { createContext, useState } from "react";
 type IConectado = "conectado" | "conectando" | "desconectado";
 
 export const AppContext = createContext<{
-  nombre: string;
-  setNombre: React.Dispatch<React.SetStateAction<string>>;
-  ciudad: string;
-  setCiudad: React.Dispatch<React.SetStateAction<string>>;
+  nombre: string | undefined;
+  setNombre: React.Dispatch<React.SetStateAction<string | undefined>>;
+  ciudad: string | undefined;
+  setCiudad: React.Dispatch<React.SetStateAction<string | undefined>>;
   conectado: IConectado;
   setConectado: React.Dispatch<React.SetStateAction<IConectado>>;
 }>({
-  nombre: "",
+  nombre: undefined,
   setNombre: () => {},
-  ciudad: "",
+  ciudad: undefined,
   setCiudad: () => {},
   conectado: "desconectado",
   setConectado: () => {},
 });
 
 const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  const [nombre, setNombre] = useState("");
-  const [ciudad, setCiudad] = useState("");
+  const [nombre, setNombre] = useState<string | undefined>();
+  const [ciudad, setCiudad] = useState<string | undefined>();
   const [conectado, setConectado] = useState<IConectado>("desconectado");
   return (
     <AppContext.Provider

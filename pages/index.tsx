@@ -34,7 +34,11 @@ export default function Home() {
           >
             REGISTRAME
           </Button>
-          <Button variant="outlined" size="LG">
+          <Button
+            variant="outlined"
+            size="LG"
+            onClick={() => push("/dashboard")}
+          >
             INICIAR SESIÓN
           </Button>
         </div>
