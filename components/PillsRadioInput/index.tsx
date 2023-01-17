@@ -9,12 +9,13 @@ export type PillOption = {
 
 const PillsRadioInput: React.FC<{
   options: PillOption[];
-  label: string;
+  label?: string;
   actives: string[] | undefined;
   setActives: React.Dispatch<React.SetStateAction<string[] | undefined>>;
   invertColors?: boolean;
   isHorizontal?: boolean;
   wrap?: boolean;
+  noLabel?: boolean;
 }> = ({
   options,
   label,
@@ -23,6 +24,7 @@ const PillsRadioInput: React.FC<{
   invertColors = false,
   isHorizontal = false,
   wrap = false,
+  noLabel = false,
 }) => {
   const handleSetActive = (value: string) => {
     if (!actives) {
@@ -42,9 +44,11 @@ const PillsRadioInput: React.FC<{
       className={s.wrapper}
       style={{ flexDirection: isHorizontal ? "row" : "column" }}
     >
-      <label className={s.label} htmlFor="">
-        {label}
-      </label>
+      {!noLabel && (
+        <label className={s.label} htmlFor="">
+          {label}
+        </label>
+      )}
       <div className={classNames(s.options, { [s.wrap]: wrap })}>
         {options.map((el) => (
           <Pill

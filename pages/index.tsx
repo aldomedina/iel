@@ -4,6 +4,7 @@ import { useRouter } from "next/router";
 
 import bgIMG from "../assets/images/leaf.webp";
 import Button from "../components/Button";
+import Icon from "../components/Icon";
 import s from "../styles/Home.module.scss";
 
 export default function Home() {
@@ -24,7 +25,9 @@ export default function Home() {
             fill
             objectFit="cover"
           />
-          <div className={s.logo}>logo</div>
+          <div className={s.logo}>
+            <Icon size="logo" icon="logo" />
+          </div>
         </div>
         <div className={s.container}>
           <Button

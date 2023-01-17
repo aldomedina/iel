@@ -3,36 +3,20 @@
   height: 100%;
   display: flex;
   justify-content: center;
+
   .container {
-    gap: 2rem;
+    gap: 1rem;
     display: flex;
     flex-direction: column;
     height: 100%;
     width: 100%;
     max-width: 900px;
-    padding: 4rem 1rem;
+    padding: 2rem 1rem;
   }
-  .top {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    .bienvenido {
-      display: flex;
-      gap: 4rem;
-      .hola {
-        font-size: 3rem;
-      }
-      .clima {
-        display: flex;
-        .tiempo {
-          font-size: 3rem;
-        }
-      }
-    }
-  }
+
   .columns {
     display: flex;
-    gap: 2rem;
+    gap: 1rem;
     flex: 1;
     .column {
       flex: 1;
@@ -42,7 +26,7 @@
       display: grid;
       grid-template-columns: 1fr 1fr;
       grid-template-rows: 1fr 1fr;
-      gap: 2rem;
+      gap: 1rem;
       .mainBox {
         grid-column: 1 / 3;
         h2 {
@@ -50,15 +34,7 @@
         }
       }
     }
-    .box {
-      border: 2px solid color(primary, base);
-      padding: 2rem;
-      display: grid;
-      .irWrapper {
-        justify-self: flex-end;
-        align-self: flex-end;
-      }
-    }
+
     .horizontalBox {
       border: 2px solid color(primary, base);
       padding: 1rem 2rem;
@@ -69,16 +45,34 @@
     .aside {
       display: flex;
       flex-direction: column;
-      gap: 2rem;
+      gap: 1rem;
       justify-content: flex-end;
     }
   }
 }
-.foto {
-  position: relative;
-  overflow: hidden;
-  width: 150px;
-  height: 150px;
-  border-radius: 999px;
-  border: 1px solid color(primar, base);
+
+.boxes {
+  display: flex;
+  gap: 1rem;
+}
+.box {
+  border: 2px solid color(primary, base);
+  padding: 2rem;
+  display: grid;
+  .irWrapper {
+    justify-self: flex-end;
+    align-self: flex-end;
+  }
+}
+.greenbox {
+  background-color: color(primary, base);
+  color: color(secondary, base);
+}
+.timer {
+  font-size: 0.8rem;
+  padding: 0.5rem;
+  background-color: color(primary, base);
+  color: color(secondary, base);
+  align-content: center;
+  justify-content: center;
 }

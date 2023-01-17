@@ -1,0 +1,27 @@
+@import "../../styles/mixins.scss";
+.top {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  .bienvenido {
+    display: flex;
+    gap: 4rem;
+    .hola {
+      font-size: 3rem;
+    }
+    .clima {
+      display: flex;
+      .tiempo {
+        font-size: 3rem;
+      }
+    }
+  }
+}
+.foto {
+  position: relative;
+  overflow: hidden;
+  width: 80px;
+  height: 80px;
+  border-radius: 999px;
+  border: 1px solid color(primar, base);
+}

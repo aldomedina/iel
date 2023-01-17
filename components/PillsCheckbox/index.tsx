@@ -8,7 +8,7 @@ export type PillOption = {
 
 const PillsCheckbox: React.FC<{
   options: PillOption[];
-  label: string;
+  label?: string;
   active: string | undefined;
   setActive: React.Dispatch<React.SetStateAction<string | undefined>>;
   isHorizontal?: boolean;
@@ -26,9 +26,11 @@ const PillsCheckbox: React.FC<{
       className={s.wrapper}
       style={{ flexDirection: isHorizontal ? "row" : "column" }}
     >
-      <label className={s.label} htmlFor="">
-        {label}
-      </label>
+      {label && (
+        <label className={s.label} htmlFor="">
+          {label}
+        </label>
+      )}
       <div className={s.options}>
         {options.map((el) => (
           <Pill

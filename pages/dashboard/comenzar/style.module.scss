@@ -1,0 +1,8 @@
+@import "../../../styles/mixins.scss";
+
+.emociones {
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+}

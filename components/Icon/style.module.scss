@@ -25,6 +25,10 @@
   height: 1rem;
   width: 1rem;
 }
+.logo {
+  height: 10rem;
+  width: 10rem;
+}
 
 .sm {
   height: 0.8rem;
@@ -36,4 +40,7 @@
 }
 .temperatura {
   mask-image: url(../../assets/icons/temperatura.svg);
+}
+.logo {
+  mask-image: url(../../assets/icons/logo.svg);
 }
