@@ -11,6 +11,11 @@
     flex: 1;
     position: relative;
     overflow: hidden;
+    &:nth-child(2) {
+      @include respond-to("mobile") {
+        display: none;
+      }
+    }
   }
   .content {
     height: 100%;

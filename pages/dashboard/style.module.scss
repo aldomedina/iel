@@ -18,6 +18,9 @@
     display: flex;
     gap: 1rem;
     flex: 1;
+    @include respond-to("mobile") {
+      flex-direction: column;
+    }
     .column {
       flex: 1;
       height: 100%;

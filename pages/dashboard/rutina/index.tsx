@@ -65,7 +65,7 @@ const Rutina = () => {
           />
         }
       />
-      <div style={{ marginTop: "6rem", alignSelf: "flex-end" }}>
+      <div className={s.comenzar}>
         <Button
           size="LG"
           onClick={() => {

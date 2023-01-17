@@ -4,7 +4,6 @@
   height: 100%;
   display: flex;
   justify-content: center;
-
   .container {
     gap: 2rem;
     display: flex;
@@ -19,6 +18,10 @@
     display: flex;
     gap: 2rem;
     flex: 1;
+    @include respond-to("mobile") {
+      flex-direction: column;
+      padding: 0rem 0 2rem;
+    }
     .column {
       flex: 1;
       height: 100%;
