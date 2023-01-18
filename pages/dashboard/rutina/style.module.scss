@@ -6,3 +6,10 @@
 .comenzar {
   margin-top: 2rem;
 }
+.row {
+  display: flex;
+  gap: 1rem;
+  input[type="number"] {
+    max-width: 50px;
+  }
+}

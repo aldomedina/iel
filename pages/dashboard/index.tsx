@@ -91,7 +91,7 @@ const Dashboard = () => {
                 </div>
               </div>
             )}
-            <div className={s.box}>
+            <div className={classNames(s.box, s.disabled)}>
               <h2>Monitoreo</h2>
               <div className={s.irWrapper}>
                 <Button isIcon>
@@ -99,7 +99,7 @@ const Dashboard = () => {
                 </Button>
               </div>
             </div>
-            <div className={s.box}>
+            <div className={classNames(s.box, s.disabled)}>
               <h2> Reporte semanal</h2>
               <div className={s.irWrapper}>
                 <Button isIcon>
@@ -109,19 +109,19 @@ const Dashboard = () => {
             </div>
           </div>
           <div className={classNames(s.column, s.aside)}>
-            <div className={s.horizontalBox}>
+            <div className={classNames(s.horizontalBox, s.disabled)}>
               <h2>Noticias</h2>
               <Button variant="text">
                 <Icon icon="flecha" size="lg" />
               </Button>
             </div>
-            <div className={s.horizontalBox}>
+            <div className={classNames(s.horizontalBox, s.disabled)}>
               <h2>Recomendaciones</h2>
               <Button variant="text">
                 <Icon icon="flecha" size="lg" />
               </Button>
             </div>
-            <div className={s.horizontalBox}>
+            <div className={classNames(s.horizontalBox, s.disabled)}>
               <h2>Foro</h2>
               <Button variant="text">
                 <Icon icon="flecha" size="lg" />

@@ -29,10 +29,10 @@ const Rutina = () => {
       top={<h1>Crear una rutina</h1>}
       content={
         <div className={s.rutinas}>
-          <div style={{ display: "flex", gap: "1rem" }}>
+          <div className={s.row}>
             <h4>Actividad</h4> <input type="text" />
           </div>
-          <div style={{ display: "flex", gap: "1rem" }}>
+          <div className={s.row}>
             <h4>Fecha</h4> <input type="date" />
           </div>
           <div style={{ display: "flex", gap: "1rem", alignItems: "center" }}>
@@ -43,7 +43,7 @@ const Rutina = () => {
               setActive={setActive}
             />
           </div>
-          <div style={{ display: "flex", gap: "1rem" }}>
+          <div className={s.row}>
             <h4>Horario</h4> <input type="number" placeholder="10:00" />-
             <input type="number" placeholder="16:00" />
           </div>

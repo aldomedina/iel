@@ -25,6 +25,9 @@
     flex-direction: column;
     justify-content: space-between;
     z-index: 10;
+    @include respond-to("mobile") {
+      padding: 1rem;
+    }
     .inputsBox {
       display: flex;
       flex-direction: column;
