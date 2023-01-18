@@ -78,7 +78,7 @@ const Dashboard = () => {
             </div>
             {conectado === "comenzado" && (
               <div className={classNames(s.greenbox, s.box)}>
-                <h1>Detener IEL</h1>
+                <h2>Detener IEL</h2>
                 <div className={s.irWrapper}>
                   <Button
                     onClick={() => setConectado("desconectado")}

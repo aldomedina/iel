@@ -62,6 +62,9 @@
   border: 2px solid color(primary, base);
   padding: 2rem;
   display: grid;
+  @include respond-to("mobile") {
+    padding: 1rem;
+  }
   .irWrapper {
     justify-self: flex-end;
     align-self: flex-end;
@@ -78,6 +81,10 @@
   color: color(secondary, base);
   align-content: center;
   justify-content: center;
+  @include respond-to("mobile") {
+    font-size: 0.6rem;
+    padding: 0.3rem;
+  }
 }
 .disabled {
   opacity: 0.3;
