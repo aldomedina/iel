@@ -6,11 +6,17 @@
   .bienvenido {
     display: flex;
     gap: 4rem;
+    @include respond-to("mobile") {
+      gap: 1rem;
+    }
     .hola {
       font-size: 3rem;
     }
     .clima {
       display: flex;
+      @include respond-to("mobile") {
+        display: none;
+      }
       .tiempo {
         font-size: 3rem;
       }
